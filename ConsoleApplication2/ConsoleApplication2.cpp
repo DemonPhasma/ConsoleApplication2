@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <cctype>
 
-// Функция для проверки палиндрома
 bool isPalindrome(const std::string& s) {
     std::string cleaned;
     for (char c : s) {
@@ -17,7 +16,6 @@ bool isPalindrome(const std::string& s) {
     return cleaned == reversed;
 }
 
-// Функция для вычисления НОД (алгоритм Евклида)
 int gcd(int a, int b) {
     while (b != 0) {
         int temp = b;
@@ -29,13 +27,11 @@ int gcd(int a, int b) {
 
 int main() {
     setlocale(LC_ALL, "RU");
-    // 1. Запрос имени и приветствие
     std::string name;
     std::cout << "Введите ваше имя: ";
     std::getline(std::cin, name);
     std::cout << "Привет, " << name << "!" << std::endl;
 
-    // 2. Сортировка массива чисел
     int n;
     std::cout << "\nВведите количество чисел для сортировки: ";
     std::cin >> n;
@@ -52,10 +48,8 @@ int main() {
     }
     std::cout << std::endl;
 
-    // Очистка буфера ввода перед getline
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    // 3. Проверка строки на палиндром
     std::string text;
     std::cout << "\nВведите строку для проверки на палиндром: ";
     std::getline(std::cin, text);
@@ -66,7 +60,6 @@ int main() {
         std::cout << "Это не палиндром." << std::endl;
     }
 
-    // 4. Вычисление НОД двух чисел
     int a, b;
     std::cout << "\nВведите первое число для вычисления НОД: ";
     std::cin >> a;
